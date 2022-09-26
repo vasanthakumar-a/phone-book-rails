@@ -4,36 +4,57 @@
   <div>
     <%= form.label :first_name %><br>
     <%= form.text_field :first_name %>
+    <% @contact.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :last_name %><br>
     <%= form.text_field :last_name %>
+    <% @contact.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :phone_number %><br>
     <%= form.number_field :phone_number %>
+    <% @contact.errors.full_messages_for(:phone_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :email %><br>
     <%= form.email_field :email %>
+    <% @contact.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :company_name %><br>
     <%= form.text_field :company_name %>
+    <% @contact.errors.full_messages_for(:company_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :birth_date %><br>
     <%= form.date_field :birth_date %>
+    <% @contact.errors.full_messages_for(:birth_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
     <%= form.label :address %><br>
     <%= form.text_area :address %>
+    <% @contact.errors.full_messages_for(:address).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
   </div>
 
   <div>
