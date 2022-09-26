@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
     end
   end
 
-  def destroy
+  def delete
     @contact = Contact.find(params[:id])
     @contact.destroy
 
