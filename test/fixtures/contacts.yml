@@ -3,7 +3,7 @@
 one:
   first_name: MyString
   last_name: MyString
-  phone_number: 
+  phone_number: 1
   email: MyString
   company_name: MyString
   birth_date: 2022-09-26
@@ -12,7 +12,7 @@ one:
 two:
   first_name: MyString
   last_name: MyString
-  phone_number: 
+  phone_number: 1
   email: MyString
   company_name: MyString
   birth_date: 2022-09-26
