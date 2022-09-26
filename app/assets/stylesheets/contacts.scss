@@ -32,3 +32,22 @@
 .contacts li {
     list-style: none;
 }
+
+.photo img {
+    width: 100px;
+    height: 100px;
+}
+
+.photo .edit {
+    padding-top: 30px;
+    float: right;
+}
+
+.details {
+    padding-top: 30px;
+}
+
+.form {
+    display: inline-block;
+    padding-left: 100px;
+}

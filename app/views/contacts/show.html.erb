@@ -1,14 +1,39 @@
-<h1> <%= @contact.first_name %> </h1>
-<h2> <%= @contact.last_name %> </h2>
-<h2> <%= @contact.phone_number %> </h2>
-<h2> <%= @contact.email %> </h2>
-<h2> <%= @contact.company_name %> </h2>
-<h2> <%= @contact.birth_date %> </h2>
-<h2> <%= @contact.address %> </h2>
+<div class="container">
+                <a class="btn btn-outline-secondary" href="/" role="button">Back</a>
+    <div class="row">
+        <div class="photo col-12">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+            <div class="edit">
+                <a class="btn btn-info" href="#" role="button">
+                    <%= link_to "Edit", edit_contact_path(@contact) %>
+                </a>
+                <a class="btn btn-danger" href="#" role="button">
+                    <%= link_to "Delete", contact_path(@contact),
+                        method: :delete,
+                        data: { confirm: 'Are you sure?' } %>
+                </a>
+            </div>
+        </div>
 
-<ul>
-    <li><%= link_to "Edit", edit_contact_path(@contact) %></li>
-    <li><%= link_to "Delete", contact_path(@contact),
-    method: :delete,
-    data: { confirm: 'Are you sure?' } %></li>
-<ul>
+    </div>
+    <div class="details">
+        <div class="row">
+        <div class="col-4">
+            <h4><b>Name : </b></h4>
+            <h4><b>Phone Number : </b></h4>
+            <h4><b>Email ID : </b></h4>
+            <h4><b>Company Name : </b></h4>
+            <h4><b>Date of Birth : </b></h4>
+            <h4><b>Address : </b></h4>
+        </div>
+        <div class="col-4">
+            <h4><%= @contact.first_name %> <%= @contact.last_name %></h4>
+            <h4><%= @contact.phone_number %></h4>
+            <h4><%= @contact.email %></h4>
+            <h4><%= @contact.company_name %></h4>
+            <h4><%= @contact.birth_date %></h4>
+            <h4><%= @contact.address %></h4>
+        </div>
+        </div>
+    </div>
+</div>
