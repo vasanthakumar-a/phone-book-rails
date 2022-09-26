@@ -1,3 +1,34 @@
-// Place all the styles related to the Contacts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+.contact-index {
+    display: block;
+}
+
+.navbar {
+    padding: 10px 100px 10px 100px;
+}
+
+.new-contact {
+    // padding-left: -100px;
+    float: right;
+}
+
+.contacts-header {
+    padding: 10px 10px 10px 100px;
+
+}
+
+.contacts{
+    padding: 10px 10px 10px 100px;
+}
+
+.contacts ul {
+    margin: 0;
+    padding: 0;
+}
+
+.contacts a:link {
+    text-decoration: none;
+}
+
+.contacts li {
+    list-style: none;
+}

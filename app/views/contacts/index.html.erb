@@ -1,14 +1,68 @@
-<div class="container">
-<h1>Contacts</h1>
+<div class="contactIndex">
+    <div class="row">
+        <div class="col-12">
+        <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+            <a class="navbar-brand" href="#">Contacts</a>
+            <div class="new-contact">
+                <%= link_to "Create New Contact", new_contact_path %>
+            </div>
+        </nav>
+        </div>
+    </div>
+    <div class="contacts-header row">
+        <div class="col-3">
+            <h5>Name</h5>
+        </div>
+        <div class="col-3">
+            <h5>Phone Number</h5>
+        </div>
+        <div class="col-3">
+            <h5>Company Name</h5>
+        </div>
+        <div class="col-3">
+            <h5>Date of Birth</h5>
+        </div>
+    </div>
+    <div class="contacts row">
+    <div class="col-3">
+    <ul>
+        <% @contacts.each do |contact| %>
+        <li>
+            <%= link_to contact.first_name, contact %>
+        </li>
+        <% end %>
+    </ul>
+    </div>
 
-<ul>
-    <% @contacts.each do |contact| %>
-    <li>
-    <%= link_to contact.first_name, contact %>
-    </li>
-    <% end %>
-</ul>
+    <div class="col-3">
+    <ul>
+        <% @contacts.each do |contact| %>
+        <li>
+            <%= link_to contact.phone_number, contact %>
+        </li>
+        <% end %>
+    </ul>
+    </div>
 
+    <div class="col-3">
+    <ul>
+        <% @contacts.each do |contact| %>
+        <li>
+            <%= link_to contact.company_name, contact %>
+        </li>
+        <% end %>
+    </ul>
+    </div>
 
-<%= link_to "Create New Contact", new_contact_path %>
+    <div class="col-3">
+    <ul>
+        <% @contacts.each do |contact| %>
+        <li>
+            <%= link_to contact.birth_date, contact %>
+        </li>
+        <% end %>
+    </ul>
+    </div>
+
+    </div>
 </div>
