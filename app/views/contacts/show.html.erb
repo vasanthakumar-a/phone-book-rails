@@ -1,5 +1,10 @@
 <h1> <%= @contact.first_name %> </h1>
 <h2> <%= @contact.last_name %> </h2>
+<h2> <%= @contact.phone_number %> </h2>
+<h2> <%= @contact.email %> </h2>
+<h2> <%= @contact.company_name %> </h2>
+<h2> <%= @contact.birth_date %> </h2>
+<h2> <%= @contact.address %> </h2>
 
 <ul>
     <li><%= link_to "Edit", edit_contact_path(@contact) %></li>
