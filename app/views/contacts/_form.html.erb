@@ -2,9 +2,9 @@
 
 <%= form_with model: @contact do |form| %>
   <div>
-    <%= form.label :Profile_Photo %><br>
-    <%= form.file_field :profile_photo %>
-    <% @contact.errors.full_messages_for(:profile_photo).each do |message| %>
+    <%= form.label :profile_photo %><br>
+    <%= form.file_field :image %>
+    <% @contact.errors.full_messages_for(:image).each do |message| %>
       <div><%= message %></div>
     <% end %>
   </div>

@@ -4,6 +4,7 @@ class ContactsController < ApplicationController
 
   def index
     @contacts = Contact.all
+
   end
 
   def show
@@ -47,6 +48,6 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :company_name, :birth_date, :address, :photo)
+    params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :company_name, :birth_date, :address, :image)
   end
 end
