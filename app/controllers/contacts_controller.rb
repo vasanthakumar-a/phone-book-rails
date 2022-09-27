@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   before_action :authenticate_user!, except: %i[home]
 
   def index
-    @contacts = Contact.all
+    @contacts = Contact.paginate(page: params[:page], per_page: 2)
 
   end
 
