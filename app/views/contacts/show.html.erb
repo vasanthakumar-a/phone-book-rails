@@ -1,8 +1,12 @@
 <div class="container">
-                <a class="btn btn-outline-secondary" href="/" role="button">Back</a>
+    <a class="btn btn-outline-secondary" href="/" role="button">Back</a>
     <div class="row">
         <div class="photo col-12">
-            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+            <% if @contact.image.attached? %>
+                <%= image_tag(@contact.image) %>
+            <% else %>
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png">
+            <% end %>
             <div class="edit">
                 <a class="btn btn-info" href="#" role="button">
                     <%= link_to "Edit", edit_contact_path(@contact) %>
