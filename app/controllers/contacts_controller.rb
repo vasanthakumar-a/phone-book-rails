@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @contact = Contact.find(params[:id])
     @contact.destroy
 
@@ -44,6 +44,6 @@ class ContactsController < ApplicationController
 
   private
   def contact_params
-    params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :company_name, :birth_date, :address)
+    params.require(:contact).permit(:first_name, :last_name, :phone_number, :email, :company_name, :birth_date, :address, :photo)
   end
 end
