@@ -15,19 +15,21 @@
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
                     <span class="h1 fw-bold mb-0">Logo</span>
+                      <%# <li class="logo-left"><img src="https://raw.githubusercontent.com/vasanthakumar-a/RideEther/master/static/images/RideEther.png"></li> %>
+
                   </div>
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Sign into your account</h5>
 
                   <div class="form-outline mb-4">
                     <%= f.label 'Email address', :class => 'form-label' %>
-                    <%= f.email_field :email, autofocus: true, autocomplete: "email", :id => 'form2Example17', :class => 'form-control form-control-l' %>
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email", :id => 'form2Example17', :class => 'form-control form-control-lg' %>
 
                   </div>
 
                   <div class="form-outline mb-4">
                     <%= f.label :Password, :class => 'form-label' %><br />
-                    <%= f.password_field :password, autocomplete: "current-password", :id => 'form2Example17', :class => 'form-control form-control-l' %>
+                    <%= f.password_field :password, autocomplete: "current-password", :id => 'form2Example17', :class => 'form-control form-control-lg' %>
                   </div>
 
                   <% if devise_mapping.rememberable? %>

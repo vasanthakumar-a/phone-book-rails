@@ -1,72 +1,70 @@
-<div class="form">
-
 <%= form_with model: @contact do |form| %>
-  <div>
-    <%= form.label :profile_photo %><br>
-    <%= form.file_field :image %>
-    <% @contact.errors.full_messages_for(:image).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
 
-  <div>
-    <%= form.label :first_name %><br>
-    <%= form.text_field :first_name %>
-    <% @contact.errors.full_messages_for(:first_name).each do |message| %>
+<div class="form-outline mb-4">
+  <%= form.label 'Profile Photo', :class => "form-label" %>
+  <%= form.file_field :image, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:image).each do |message| %>
       <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :last_name %><br>
-    <%= form.text_field :last_name %>
-    <% @contact.errors.full_messages_for(:last_name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :phone_number %><br>
-    <%= form.number_field :phone_number %>
-    <% @contact.errors.full_messages_for(:phone_number).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :email %><br>
-    <%= form.email_field :email %>
-    <% @contact.errors.full_messages_for(:email).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :company_name %><br>
-    <%= form.text_field :company_name %>
-    <% @contact.errors.full_messages_for(:company_name).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :birth_date %><br>
-    <%= form.date_field :birth_date %>
-    <% @contact.errors.full_messages_for(:birth_date).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.label :address %><br>
-    <%= form.text_area :address %>
-    <% @contact.errors.full_messages_for(:address).each do |message| %>
-      <div><%= message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+  <% end %>
 </div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'First Name', :class => "form-label" %>
+  <%= form.text_field :first_name, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'Last Name', :class => "form-label" %>
+  <%= form.text_field :last_name, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'Phone Number', :class => "form-label" %>
+  <%= form.number_field :phone_number, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:phone_number).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'Email Id', :class => "form-label" %>
+  <%= form.email_field :email, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'Company Name', :class => "form-label" %>
+  <%= form.text_field :company_name, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:company_name).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'Date of Birth', :class => "form-label" %>
+  <%= form.date_field :birth_date, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:birth_date).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="form-outline mb-4">
+  <%= form.label 'Address', :class => "form-label" %>
+  <%= form.text_area :address, autofocus: true, :id => "form3Example3cg", :class => "form-control form-control-lg" %>
+  <% @contact.errors.full_messages_for(:address).each do |message| %>
+      <div><%= message %></div>
+  <% end %>
+</div>
+
+<div class="d-flex justify-content-center">
+  <%= form.submit "Update Contact", :class => "btn btn-danger btn-lg btn-block" %>
+</div>
+<% end %>
