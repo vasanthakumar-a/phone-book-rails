@@ -33,7 +33,7 @@ a:visited {
         }
 }
 .link {
-        color: $black;
+        color: $white;
 }
 .btn-primary {
         color: $black;
@@ -55,4 +55,20 @@ caption {
         float: left;
         clear: both;
 
+}
+
+.logo-left {
+        display: block;
+        margin-left: 60px;
+        float: left;
+}
+
+.logo-left img {
+        width: 150px;
+        height: 50px;
+}
+
+.vas li {
+        display: block;
+        float: right;
 }
