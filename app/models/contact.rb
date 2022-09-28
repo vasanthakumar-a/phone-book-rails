@@ -9,6 +9,8 @@ class Contact < ApplicationRecord
   validates :company_name, presence: true
   validates :address, presence: true, length: { minimum: 10 }
 
+  validates_uniqueness_of :phone_number, :email
+
 
   # validates :image, presence: true, blob: { content_type: 'image/jpg' }
 
