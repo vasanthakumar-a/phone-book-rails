@@ -24,9 +24,11 @@ gem 'devise'
 # Active Storage Validator
 gem 'activestorage-validator', '~> 0.1.2'
 # Pagination
-gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'kaminari', '~> 1.2.2'
 # Faker
 gem 'faker'
+# Postgresql
+gem 'pg'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

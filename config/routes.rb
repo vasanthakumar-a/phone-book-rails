@@ -4,5 +4,7 @@ Rails.application.routes.draw do
 
   root "contacts#index"
 
-  resources :contacts
+  resources :contacts do
+    get '/page/:page', action: :index, on: :collection
+  end
 end

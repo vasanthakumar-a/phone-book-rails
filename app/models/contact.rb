@@ -1,5 +1,7 @@
 class Contact < ApplicationRecord
 
+  paginates_per 8
+
   has_one_attached :image
 
   validates :first_name, presence: true
@@ -8,6 +10,8 @@ class Contact < ApplicationRecord
   validates :email, presence: true
   validates :company_name, presence: true
   validates :address, presence: true, length: { minimum: 10 }
+
+  validates_uniqueness_of :phone_number, :email
 
 
   # validates :image, presence: true, blob: { content_type: 'image/jpg' }
