@@ -2,20 +2,22 @@
     <div class="row align-items-center">
         <div class="col-md-6">
             <div class="mb-3">
-                <h5 class="card-title">Contact List <span class="text-muted fw-normal ms-2">(834)</span></h5>
+                <h5 class="card-title">Contact List <span class="text-muted fw-normal ms-2">(<%= @contacts.count %>)</span></h5>
             </div>
         </div>
     </div>
 
-    <% @contacts.each do |contact| %>
     <div class="row">
+        <% @contacts.each do |contact| %>
         <div class="col-xl-3 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex align-items-center">
-
-                        <%# <div><%= image_tag(@contact.image), :class => "avatar-md rounded-circle img-thumbnail" %><%#/div> %>
-                        <div><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="avatar-md rounded-circle img-thumbnail" /></div>
+                        <% if contact.image.attached? %>
+                            <div><%= image_tag(contact.image, :class => "avatar-md rounded-circle img-thumbnail") %></div>
+                        <% else %>
+                            <div><img src="https://bootdey.com/img/Content/avatar/avatar1.png" alt="" class="avatar-md rounded-circle img-thumbnail" /></div>
+                        <% end %>
                         <div class="flex-1 ms-3">
                             <h5 class="font-size-16 mb-1"><a href="#" class="text-dark"><%= contact.first_name %> <%= contact.last_name %></a></h5>
                         </div>
@@ -33,17 +35,19 @@
                 </div>
             </div>
         </div>
+    <% end %>
     </div>
+
 
     <div class="row g-0 align-items-center pb-4">
         <div class="col-sm-6">
-            <div><p class="mb-sm-0">Showing 1 to 10 of 57 entries</p></div>
+            <div><p class="mb-sm-0">Showing 1 to 3 of 8 entries</p></div>
         </div>
         <div class="col-sm-6">
             <div class="float-sm-end">
-            <%= will_paginate %>
+            <%= paginate @contacts %>
             </div>
         </div>
     </div>
-    <% end %>
+
 </div>

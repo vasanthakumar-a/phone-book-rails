@@ -24,7 +24,7 @@ gem 'devise'
 # Active Storage Validator
 gem 'activestorage-validator', '~> 0.1.2'
 # Pagination
-gem 'bootstrap-will_paginate', '~> 1.0'
+gem 'kaminari', '~> 1.2.2'
 # Faker
 gem 'faker'
 # Postgresql

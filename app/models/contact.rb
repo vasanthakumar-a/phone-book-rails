@@ -1,5 +1,7 @@
 class Contact < ApplicationRecord
 
+  paginates_per 8
+
   has_one_attached :image
 
   validates :first_name, presence: true
